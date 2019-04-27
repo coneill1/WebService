@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "1d91b2b8-7191-4d4d-86ef-f0dff194344a",
+		"name": "ethnicity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all ethnicities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/ethnicities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"ethnicities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update ethnicity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"oldName\": \"undefined\",\n\t\"newName\": \"african-american\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/ethnicity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"ethnicity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add ethnicity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"unknown\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/ethnicity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"ethnicity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete ethnicity",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"white\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/ethnicity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"ethnicity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

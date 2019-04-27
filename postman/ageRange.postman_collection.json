@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "fb390c38-08ce-48f6-859a-5f94b63d3747",
+		"name": "ageRange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all age ranges",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/ageRanges",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"ageRanges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add age range",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"high\": 76,\n\t\"low\": 0\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/ageRange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"ageRange"
+					]
+				},
+				"description": "need to test 2 cases:\n1. age range includes existing age range\n2. age range intersects with existing age range"
+			},
+			"response": []
+		},
+		{
+			"name": "update age range",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\"\n\t\"high\": 76,\n\t\"low\": 0\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/ageRange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"ageRange"
+					]
+				},
+				"description": "Need to test following cases:\n1. update age range with with id that doen't exist\n2. update age range with valid id but highs and lows intersect or contain another ageRange"
+			},
+			"response": []
+		},
+		{
+			"name": "delete age range",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/ageRange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"ageRange"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "a6c2b485-b19c-4bbb-bed4-274aac7db1ab",
+		"name": "specialAccommodation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add accommodation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"test99\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/specialAccommodation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"specialAccommodation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all accommodations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/specialAccommodations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"specialAccommodations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update accommodation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"oldType\": \"test\",\n\t\"newType\": \"test98\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/specialAccommodation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"specialAccommodation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete accommodation",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"test99\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/specialAccommodation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"specialAccommodation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
