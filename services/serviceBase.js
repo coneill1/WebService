@@ -32,7 +32,7 @@ class ServiceBase {
     * 1062 - duplicate entry
     * unknown
     * */
-    errorHandler(sqlCode) {
+    errorHandler(sqlCode, msg) {
         switch (sqlCode) {
             case 1062:
                 return new Error({detail: 'Duplicate Value', statusCode: 400});
@@ -42,10 +42,25 @@ class ServiceBase {
                 return new Error({detail: 'Invalid Data', statusCode: 400});
             case 1451:
                 return new Error({detail: 'Invalid state change', statusCode: 400});
+            case 1216:
+                return new Error({detail: msg, statusCode: 400});
             default:
                 return new Error({detail: 'Unknown', statusCode: 500});
         }
     };
+
+    buildWhereClause(obj, type) {
+        let filter = '';
+        const keys = Object.keys(obj).filter(key => type.prototype.hasOwnProperty(key));
+        if (keys.length > 0) {
+            filter = 'WHERE ';
+            keys.forEach(k => filter += `${k}='${obj[k]}' and `);
+        }
+
+        filter += ' true';
+
+        return filter;
+    }
 }
 
 module.exports = ServiceBase;

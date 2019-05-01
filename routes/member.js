@@ -1,25 +1,24 @@
 const express = require('express');
 const router = express.Router();
+const bodyParser = require('body-parser');
+
+const Member = require('../models/member.js');
+const ContactInfo = require('../models/contactInfo.js');
+
+router.use(bodyParser.urlencoded({extended: false}));
+router.use(bodyParser.json());
 
 
 /**
- * GET - collection of Members
+ * CU - single Member
  */
 router.route('/')
-    .put((req, res) => {
-
+    .put(async (req, res) => {
+        res.sendStatus(200);
     })
     .post((req, res) => {
-
+        res.sendStatus(200);
     });
-
-/**
- * GET - single Member
- * @param id - id of the Member
- */
-router.get('/:id', (req, res) => {
-    res.status(200).send('Member')
-});
 
 /**
  * CRUD - single ContactInformation of a Member

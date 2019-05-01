@@ -22,7 +22,7 @@ router.get('/specialAccommodations', async (req, res) => {
 
 const handleError = (req, res, error) => {
     res.error.detail = error.detail;
-    return res.error.send(error.statusCode);
+    return res.error.send(error.statusCode, error.message);
 };
 
 /**
