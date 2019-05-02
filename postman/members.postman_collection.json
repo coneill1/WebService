@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "07e3a813-0462-4f44-9082-532d9d686032",
+		"name": "members",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/members",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-filter",
+						"value": "{\"membershipId\": \"1\"}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"members"
+					]
+				},
+				"description": "- Tests the x-filter header to filter the collection of members that is returned from the api\n- Syntax: \n\t- x-filter: {stringified JSON object}"
+			},
+			"response": []
+		},
+		{
+			"name": "Get member contact information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/member/3/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"member",
+						"3",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a member",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1,\n        \"firstName\": \"Chris\",\n        \"lastName\": \"ONeill\",\n        \"ageRangeLow\": 18,\n        \"ageRangeHigh\": 31,\n        \"gender\": \"male\",\n        \"ethnicity\": \"Unknown\",\n        \"specialAccommodation\": \"None\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/member",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update member contact info",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"memberId\": 1,\n        \"firstName\": \"test\",\n        \"lastName\": \"ONeill\",\n        \"phone\": \"9259634649\",\n        \"email\": \"test@gmail.com\",\n        \"street\": \"preece st\",\n        \"city\": \"boise\",\n        \"state\": \"ID\",\n        \"zip\": \"83704\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/member/1/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"member",
+						"1",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add contact information for member",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"memberId\": 3,\n        \"firstName\": \"test\",\n        \"lastName\": \"ONeill\",\n        \"phone\": \"0123456789\",\n        \"email\": \"fake@gmail.com\",\n        \"street\": \"preece st\",\n        \"city\": \"boise\",\n        \"state\": \"ID\",\n        \"zip\": \"83704\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/member/3/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"member",
+						"3",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add member",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"membershipId\": 1,\n        \"firstName\": \"Gretty\",\n        \"lastName\": \"ONeill\",\n        \"ageRangeLow\": 18,\n        \"ageRangeHigh\": 31,\n        \"gender\": \"female\",\n        \"ethnicity\": \"Unknown\",\n        \"specialAccommodation\": \"None\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/member",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"member"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

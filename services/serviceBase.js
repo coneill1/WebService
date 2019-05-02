@@ -61,6 +61,10 @@ class ServiceBase {
 
         return filter;
     }
+
+    prepSql (sql) {
+        return sql.replace(/\n\s*/g, '').replace(/undefined/g, 'null');
+    };
 }
 
 module.exports = ServiceBase;

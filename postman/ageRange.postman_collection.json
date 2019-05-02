@@ -44,7 +44,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"high\": 76,\n\t\"low\": 0\n}"
+					"raw": "{\n\t\"high\": 17,\n\t\"low\": 0\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3000/api/admin/ageRange",
@@ -77,7 +77,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"id\": \"1\"\n\t\"high\": 76,\n\t\"low\": 0\n}"
+					"raw": "{\n\t\"id\": 7,\n\t\"high\": 17,\n\t\"low\": 0\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3000/api/admin/ageRange",

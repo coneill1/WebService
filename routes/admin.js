@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const specialAccommodationService = require('../services/admin/specialAccommodationService.js');
 const ethnicityService = require('../services/admin/ethnicityService.js');
 const ageRangeService = require('../services/admin/ageRangeService.js');
+const {handleError} = require("../routerFunctions.js");
 
 router.use(bodyParser.urlencoded({extended: false}));
 router.use(bodyParser.json());
@@ -19,11 +20,6 @@ router.get('/specialAccommodations', async (req, res) => {
         handleError(req, res, e);
     }
 });
-
-const handleError = (req, res, error) => {
-    res.error.detail = error.detail;
-    return res.error.send(error.statusCode, error.message);
-};
 
 /**
  * GET - single SpecialAccommodation
